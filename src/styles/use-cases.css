@@ -1,0 +1,58 @@
+/* --- USE CASES SECTION --- */
+.use-cases {
+  padding: 120px 0;
+  background-color: var(--bg-primary);
+}
+
+.use-case-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.use-case-card {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease;
+}
+
+.use-case-card:hover {
+  transform: scale(1.05);
+}
+
+.use-case-content {
+  padding: 2rem;
+  background: var(--bg-secondary);
+}
+
+.use-case-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.use-case-content p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.use-case-content ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.use-case-content ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.use-case-content ul li i {
+  color: var(--success-color);
+}
