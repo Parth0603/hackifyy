@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/Footer.css';
 const Footer = ({ navigate }) => {
   return (
     <footer style={{backgroundColor: '#0b1120', borderTop: '1px solid #334155', padding: '3rem 0 1.5rem'}}>

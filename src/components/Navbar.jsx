@@ -15,7 +15,7 @@ function Navbar({ navigate }) {
           <button className="nav-link" onClick={() => document.getElementById('features')?.scrollIntoView({behavior: 'smooth'})}>Features</button>
           <button className="nav-link" onClick={() => document.getElementById('zones')?.scrollIntoView({behavior: 'smooth'})}>Zones</button>
           <button className="nav-link" onClick={() => navigate('contact')}>Contact Us</button>
-          <button className="nav-link" onClick={() => navigate('login')} className="nav-link login-btn">Enter App</button>
+          <button className="nav-link login-btn" onClick={() => navigate('login')}>Enter App</button>
         </div>
         
         {/* Mobile menu button */}
