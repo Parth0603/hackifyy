@@ -1,213 +1,4 @@
 /* --- DASHBOARD & ZONES --- */
-
-/* Dashboard Navbar */
-.dashboard-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: rgba(11, 17, 32, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border-color);
-  z-index: 1001;
-  transition: all 0.3s ease;
-}
-
-.dashboard-nav .nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.dashboard-nav .nav-logo h2 {
-  color: var(--accent-color);
-  font-weight: 700;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-.dashboard-nav .nav-logo h2:hover {
-  transform: scale(1.05);
-  color: var(--primary-color);
-}
-
-.nav-user {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  color: var(--text-secondary);
-}
-
-.nav-user strong {
-  color: var(--text-primary);
-}
-
-.logout-btn {
-  background: var(--error-color);
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.logout-btn:hover {
-  background: #dc2626;
-  transform: translateY(-2px);
-}
-
-.zones-grid {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
-  border-radius: 50%;
-  overflow: hidden;
-  background: rgba(23, 33, 54, 0.9);
-  border: 2px solid var(--border-color);
-}
-
-.zones-grid::before {
-  content: 'ZONES';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80px;
-  height: 80px;
-  background: var(--bg-primary);
-  border: 2px solid var(--primary-color);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary-color);
-  font-weight: 700;
-  font-size: 0.8rem;
-  z-index: 10;
-}
-
-.zone-card {
-  position: absolute;
-  width: 50%;
-  height: 50%;
-  transform-origin: 100% 100%;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background: rgba(52, 65, 85, 0.6);
-  border: 1px solid var(--border-color);
-}
-
-.zone-card:nth-child(1) {
-  top: 0;
-  left: 50%;
-  transform: rotate(-36deg);
-  clip-path: polygon(0 100%, 50% 0, 100% 100%);
-}
-
-.zone-card:nth-child(2) {
-  top: 0;
-  right: 0;
-  transform: rotate(36deg);
-  clip-path: polygon(0 0, 100% 50%, 0 100%);
-}
-
-.zone-card:nth-child(3) {
-  bottom: 0;
-  right: 0;
-  transform: rotate(108deg);
-  clip-path: polygon(0 0, 50% 100%, 100% 0);
-}
-
-.zone-card:nth-child(4) {
-  bottom: 0;
-  left: 0;
-  transform: rotate(180deg);
-  clip-path: polygon(100% 0, 0 50%, 100% 100%);
-}
-
-.zone-card:nth-child(5) {
-  top: 0;
-  left: 0;
-  transform: rotate(-108deg);
-  clip-path: polygon(0 0, 100% 0, 50% 100%);
-}
-
-.zone-card:hover {
-  background: rgba(99, 102, 241, 0.3);
-  border-color: var(--primary-color);
-  z-index: 5;
-}
-
-.zone-icon {
-  width: 30px;
-  height: 30px;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  color: white;
-  margin-bottom: 0.3rem;
-  transform: rotate(72deg);
-}
-
-.zone-content {
-  text-align: center;
-  transform: rotate(72deg);
-}
-
-.zone-content h3 {
-  font-size: 0.6rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin: 0;
-  text-transform: uppercase;
-}
-
-.zone-content p {
-  display: none;
-}
-
-.zone-arrow {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .zones-grid {
-    width: 280px;
-    height: 280px;
-  }
-  
-  .zone-card {
-    width: 70px;
-    height: 70px;
-  }
-  
-  .zone-icon {
-    width: 30px;
-    height: 30px;
-    font-size: 1rem;
-  }
-  
-  .zone-content h3 {
-    font-size: 0.6rem;
-  }
-}
 .dashboard-container, .zone-container {
   padding: 120px 2rem 4rem;
   max-width: 1200px;
@@ -229,7 +20,29 @@
   font-size: 1.2rem;
 }
 
+.zone-card {
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  position: relative;
+  border: 1px solid var(--border-color);
+}
 
+.zone-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.zone-card.featured {
+  border-color: var(--primary-color);
+}
 
 .teaching-zone .zone-icon {
   background: linear-gradient(135deg, #10b981, #059669);
